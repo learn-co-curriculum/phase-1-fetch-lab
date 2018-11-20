@@ -32,7 +32,7 @@ return.
 **JSON** is a language-agnostic way of formatting data. If we send a web request
 to the Game of Thrones API, it will return to us a JSON collection of data. With
 just one easy line of code, we can tell JavaScript to treat that JSON collection
-as a nested hash. In this way, large and complicated amounts of data can be
+as a nested `Object`. In this way, large and complicated amounts of data can be
 shared across platforms.
 
 ## Instructions
