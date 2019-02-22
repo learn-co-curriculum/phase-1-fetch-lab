@@ -52,7 +52,7 @@ API's response as JSON. We then pass the arrow function's result to the _next_
 `then()`. Thus in the second `then()` we receive a JSON strong that, when we
 pass it to `console.log()` prints a JavaScript object to our console.
 
-Our response from the API contains all ten books currently existing in the Game
+The response from the API contains all ten books currently existing in the Game
 of Thrones series, in a JSON format.
 
 ![Fetch Response from Game of Thrones API](https://curriculum-content.s3.amazonaws.com/web-development/js/ajax/fetch_lab_promises_response.png)
