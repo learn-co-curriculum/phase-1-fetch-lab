@@ -47,29 +47,36 @@ fetch('https://anapioficeandfire.com/api/books')
   .then(json => console.log(json));
 ```
 
-Remember that we can use the `json` method of the `Body` mixin to render our
-response as JSON, and that each `then` passes its return value to the next
-`then` as an argument.
+Remember that we can use the `json()` method of the `Body` mixin to render the
+API's response as JSON. We then pass the arrow function's result to the _next_
+`then()`. Thus in the second `then()` we receive a JSON strong that, when we
+pass it to `console.log()` prints a JavaScript object to our console.
 
-Our response from the API contains all ten books currently existing in the Game
+The response from the API contains all ten books currently existing in the Game
 of Thrones series, in a JSON format.
 
 ![Fetch Response from Game of Thrones API](https://curriculum-content.s3.amazonaws.com/web-development/js/ajax/fetch_lab_promises_response.png)
 
-In this case, since we've logged it to the console, the console is interpreting
-that format for us into a nicely formatted way that we can read. Since we asked
-for all the books with the `/books` part of the url, it gave us all the books.
-APIs have many different variations and can be as customizable as the developer
-wants them to be. If you're really lucky, there will be robust documentation to
-go along with the API to help you out and give you a road map to help you figure
-out how to format your request for information. For now we'll focus on just
-getting different kinds of information out of the API.
+Since we asked for all the books by making a query to the `/books` path, it
+gave us all the books.  APIs have many different variations and can be as
+customizable as the developer wants them to be. If you're really lucky, there
+will be robust documentation to go along with the API to help you out and give
+you a road map to help you figure out how to format your request for
+information. For now we'll focus on just getting different kinds of information
+out of the API's `/books` path.
 
-You will need to find in the browser console:
+Play around with the logged response. See if you can design a strategy to take
+the logged object to find the following answers. To pass the lab you don't have
+to have to encode these strategies.
 
-1. All the Houses in Game of Thrones
-2. The 5th book in the series
-3. The 1031st character in the series
+1. The 5th book in the series
+2. The 1031st character in the series
+3. The total number of pages of all the books
+
+It's not uncommon for developers who are integrating with third-party APIs to
+have to do some exploration of the returned data to find the thing they're
+looking for.
+
 
 ## Deliverables
 
