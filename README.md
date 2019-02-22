@@ -47,9 +47,10 @@ fetch('https://anapioficeandfire.com/api/books')
   .then(json => console.log(json));
 ```
 
-Remember that we can use the `json` method of the `Body` mixin to render our
-response as JSON, and that each `then` passes its return value to the next
-`then` as an argument.
+Remember that we can use the `json()` method of the `Body` mixin to render the
+API's response as JSON. We then pass the arrow function's result to the _next_
+`then()`. Thus in the second `then()` we receive a JSON strong that, when we
+pass it to `console.log()` prints a JavaScript object to our console.
 
 Our response from the API contains all ten books currently existing in the Game
 of Thrones series, in a JSON format.
