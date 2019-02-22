@@ -1,23 +1,25 @@
+const sinon = require( 'sinon' );
+
+const helpers = require( './helpers' );
+const chai = require( 'chai' );
+const spies = require( 'chai-spies' );
+
+chai.use( spies );
 
 
-describe("index.html", () => {
-  it("includes 'hello'", () => {
-    expect(document.querySelector('body').innerHTML).to.include('hello')
-  })
+describe( "index.js", () => {
+  describe( 'getPosts()', () => {
 
-  it("includes div", () => {
-    expect(document.querySelector('body').innerHTML, "no empty div element found within body").to.include('<div></div>')
-  })
+    beforeEach( () => {
+      window.document.body.innerHTML = '<main></main>'
+      window.fetch = require( 'node-fetch' );
+      chai.spy.on( window, 'fetch' );
+    } );
 
-
-})
-
-
-describe("index.js", () => {
-  it("exists", () => {
-    expect(testVar).to.exist
-    expect(testVar).to.deep.equal({}) //without .deep, {} does not equal {}
-    expect(testFunc).to.exist
-    expect(testFunc()).to.equal('hi')
-  })
+    it( "sends a fetch request to 'https://anapioficeandfire.com/api/books'", async () => {
+      await fetchBooks()
+      expect( window.fetch, "A fetch to the API was not found" )
+        .to.have.been.called.with( 'https://anapioficeandfire.com/api/books' );
+    } )
+  } )
 })
