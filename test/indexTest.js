@@ -21,7 +21,7 @@ describe( "index.js", () => {
         .to.have.been.called.with( 'https://anapioficeandfire.com/api/books' );
     } )
 
-    it( "sends renders books onto the DOM'", async () => {
+    it( "renders book titles into the DOM by passing a JSON object to renderBooks()", async () => {
       chai.spy.on( window, 'renderBooks' );
       await fetchBooks().then(() => {
         expect( window.renderBooks ).to.have.been.called();
