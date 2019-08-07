@@ -49,7 +49,7 @@ fetch('https://anapioficeandfire.com/api/books')
 
 Remember that we can use the `json()` method of the `Body` mixin to render the
 API's response as JSON. We then pass the arrow function's result to the _next_
-`then()`. Thus in the second `then()` we receive a JSON strong that, when we
+`then()`. Thus in the second `then()` we receive a JSON `String` that, when we
 pass it to `console.log()` prints a JavaScript object to our console.
 
 The response from the API contains all ten books currently existing in the Game
