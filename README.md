@@ -46,11 +46,18 @@ fetch('https://anapioficeandfire.com/api/books')
   .then(resp => resp.json())
   .then(json => console.log(json));
 ```
+<p align="center">
+  <img src="https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/Image_25_AsynchronousJavaScript.png" width="500">
+</p>
 
 Remember that we can use the `json()` method of the `Body` mixin to render the
 API's response as JSON. We then pass the arrow function's result to the _next_
-`then()`. Thus in the second `then()` we receive a JSON strong that, when we
+`then()`. Thus in the second `then()` we receive a JSON `String` that, when we
 pass it to `console.log()` prints a JavaScript object to our console.
+
+<p align="center">
+  <img src="https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/Image_26_FullAsynchronousJavaScript.png" width="500">
+</p>
 
 The response from the API contains all ten books currently existing in the Game
 of Thrones series, in a JSON format.
