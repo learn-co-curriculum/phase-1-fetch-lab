@@ -34,7 +34,7 @@
     "mocha": "5.2.0",
     "mocha-jsdom": "~1.1.0",
     "mocha-multi": "1.0.1",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "sinon": "^7.2.3",
     "sinon-stub-promise": "^4.0.0"
   }
