@@ -46,18 +46,14 @@ fetch('https://anapioficeandfire.com/api/books')
   .then(resp => resp.json())
   .then(json => console.log(json));
 ```
-<p align="center">
-  <img src="https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/Image_25_AsynchronousJavaScript.png" width="500">
-</p>
+![](https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/Image_25_AsynchronousJavaScript.png)
 
 Remember that we can use the `json()` method of the `Body` mixin to render the
 API's response as JSON. We then pass the arrow function's result to the _next_
 `then()`. Thus in the second `then()` we receive a JSON `String` that, when we
 pass it to `console.log()` prints a JavaScript object to our console.
 
-<p align="center">
-  <img src="https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/Image_26_FullAsynchronousJavaScript.png" width="500">
-</p>
+![](https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/Image_26_FullAsynchronousJavaScript.png)
 
 The response from the API contains all ten books currently existing in the Game
 of Thrones series, in a JSON format.
@@ -95,10 +91,10 @@ The returned response should be converted to JSON. Then, call the second functio
 check if you have done this correctly, open up the index.html page of this lab
 and you should see a list of Game Of Thrones titles on your webpage.
 
-**Note**: The tests in this lab need access to the `fetch()` request inside
-`fetchBooks()`. In order to give them access, write you solution so that
-`fetchBooks()` _returns_ the `fetch()`. This will not change the behavior of
-your `fetch()`.
+> **Note**: The tests in this lab need access to the `fetch()` request inside
+> `fetchBooks()`. In order to give them access, write you solution so that
+> `fetchBooks()` _returns_ the `fetch()`. This will not change the behavior of
+> your `fetch()`.
 
 ## Conclusion
 
