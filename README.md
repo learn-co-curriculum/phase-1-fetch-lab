@@ -88,7 +88,7 @@ request to the Game of Thrones API ('https://anapioficeandfire.com/api/books').
 The returned response should be converted to JSON. Then, it should call the
 second function, `renderBooks()`, passing in the JSON-ified data as the
 argument. To check if you have done this correctly, open up the index.html page
-of this lab and you should see a list of Game Of Thrones titles on your webpage.
+of this lab; you should see a list of Game Of Thrones titles on your webpage.
 
 > **NOTE**: The tests in this lab need to access the `fetch()` request you will
 > create inside `fetchBooks()`. In order to give them access, write your
