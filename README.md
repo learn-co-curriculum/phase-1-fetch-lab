@@ -1,4 +1,4 @@
-# `fetch()` Lab
+# Fetch Lab
 
 ## Learning Goals
 
