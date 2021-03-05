@@ -47,8 +47,8 @@ fetch('https://anapioficeandfire.com/api/books')
 ```
 
 The first line of code fetches the requested data from the API. In the second
-line, we use the [`json()` method][json method] of the [`Body` mixin][body
-mixin] to render the API's response as plain old JavaScript object (POJO).
+line, we use the [`json()` method][json method] of the [`Body` mixin][body mixin]
+to render the API's response as plain old JavaScript object (POJO).
 Because we're using arrow syntax, the object is returned and passed to the
 _next_ `then()`. Finally, in the second `then()`, the `console.log()` prints
 the JavaScript object to our console.
