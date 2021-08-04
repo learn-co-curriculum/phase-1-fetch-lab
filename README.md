@@ -7,10 +7,8 @@
 ## Introduction
 
 In this lab, we'll be using `fetch()` to send web requests to the [Game of
-Thrones][GoT] API. We'll make a web request to the API, and in return we will
+Thrones][got] API. We'll make a web request to the API, and in return we will
 receive a collection of data, structured like a nested JavaScript `Object`.
-
-![Game of Thrones Come at Me Gif](https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/got-comeatme.gif)
 
 ### What's an API?
 
@@ -37,13 +35,13 @@ shared across platforms.
 
 ## Instructions
 
-Go ahead and navigate to the [Game of Thrones][GoT] API in a separate browser
+Go ahead and navigate to the [Game of Thrones][got] API in a separate browser
 tab and open DevTools. Copy the following code into the console:
 
 ```js
-fetch('https://anapioficeandfire.com/api/books')
-  .then(resp => resp.json())
-  .then(json => console.log(json));
+fetch("https://anapioficeandfire.com/api/books")
+  .then((resp) => resp.json())
+  .then((json) => console.log(json));
 ```
 
 The first line of code fetches the requested data from the API. In the second
@@ -61,7 +59,7 @@ of Thrones series, in a JSON format.
 ![Fetch Response from Game of Thrones API](https://curriculum-content.s3.amazonaws.com/web-development/js/ajax/fetch_lab_promises_response.png)
 
 Since we asked for all the books by making a query to the `/books` path, it gave
-us all the books.  APIs have many different variations and can be as
+us all the books. APIs have many different variations and can be as
 customizable as the developer wants them to be. If you're really lucky, there
 will be robust documentation to go along with the API that gives you a road map
 to help you figure out how to format your request for information. For now we'll
@@ -101,8 +99,6 @@ APIs are powerful tools that can help you leverage the power of the available
 data on the web. Once you feel comfortable using the tools that access the data,
 the world is your oyster!
 
-![Dancing](https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/got-dancing.gif)
-
-[GoT]: https://anapioficeandfire.com/
+[got]: https://anapioficeandfire.com/
 [json method]: https://developer.mozilla.org/en-US/docs/Web/API/Body/json
 [body mixin]: https://developer.mozilla.org/en-US/docs/Web/API/Body
