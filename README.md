@@ -45,11 +45,14 @@ fetch("https://anapioficeandfire.com/api/books")
 ```
 
 The first line of code fetches the requested data from the API. In the second
-line, we use the [`json()` method][json method] of the [`Body` mixin][body mixin]
-to render the API's response as plain old JavaScript object (POJO).
-Because we're using arrow syntax, the object is returned and passed to the
-_next_ `then()`. Finally, in the second `then()`, the `console.log()` prints
-the JavaScript object to our console.
+line, we use the [`json()` method][json method] of the [`Response`
+interface][response interface] to render the API's response as plain old
+JavaScript object (POJO). Because we're using arrow syntax, the object is
+returned and passed to the _next_ `then()`. Finally, in the second `then()`, the
+`console.log()` prints the JavaScript object to our console.
+
+> **Note** You'll find a lot of great info on using the `fetch` method in the
+> [MDN Using Fetch][fetch] guide. Bookmark this page for future reference!
 
 ![Convert JSON into object](https://curriculum-content.s3.amazonaws.com/fewpjs/fewpjs-fetch-lab/Image_26_FullAsynchronousJavaScript.png)
 
@@ -59,12 +62,11 @@ of Thrones series, in a JSON format.
 ![Fetch Response from Game of Thrones API](https://curriculum-content.s3.amazonaws.com/web-development/js/ajax/fetch_lab_promises_response.png)
 
 Since we asked for all the books by making a query to the `/books` path, it gave
-us all the books. APIs have many different variations and can be as
-customizable as the developer wants them to be. If you're really lucky, there
-will be robust documentation to go along with the API that gives you a road map
-to help you figure out how to format your request for information. For now we'll
-focus on just getting different kinds of information out of the API's `/books`
-path.
+us all the books. APIs have many different variations and can be as customizable
+as the developer wants them to be. If you're really lucky, there will be robust
+documentation to go along with the API that gives you a road map to help you
+figure out how to format your request for information. For now we'll focus on
+just getting different kinds of information out of the API's `/books` path.
 
 Play around with the logged response. See if you can design a strategy to use
 the logged object and find the following answers.
@@ -99,6 +101,12 @@ APIs are powerful tools that can help you leverage the power of the available
 data on the web. Once you feel comfortable using the tools that access the data,
 the world is your oyster!
 
+## Resources
+
+- [Game of Thrones API][got]
+- [MDN: Using Fetch][fetch]
+
 [got]: https://anapioficeandfire.com/
-[json method]: https://developer.mozilla.org/en-US/docs/Web/API/Body/json
-[body mixin]: https://developer.mozilla.org/en-US/docs/Web/API/Body
+[json method]: https://developer.mozilla.org/en-US/docs/Web/API/Response/json
+[response interface]: https://developer.mozilla.org/en-US/docs/Web/API/Response
+[fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
