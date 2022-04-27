@@ -45,8 +45,8 @@ fetch("https://anapioficeandfire.com/api/books")
 ```
 
 The first line of code fetches the requested data from the API. In the second
-line, we use the [`json()` method][json method] of the [`Response`
-interface][response interface] to render the API's response as plain old
+line, we use the [`json()` method][json-method] of the [`Response`
+interface][response-interface] to render the API's response as plain old
 JavaScript object (POJO). Because we're using arrow syntax, the object is
 returned and passed to the _next_ `then()`. Finally, in the second `then()`, the
 `console.log()` prints the JavaScript object to our console.
@@ -84,7 +84,7 @@ This is an opportunity for you to practice.
 
 In `index.js`, there is an empty function, `fetchBooks()`, that is called when
 `index.html` is loaded. To pass this lab, this function should include a fetch
-request to the Game of Thrones API ('https://anapioficeandfire.com/api/books').
+request to the Game of Thrones API (https://anapioficeandfire.com/api/books).
 The returned response should be converted to JSON. Then, it should call the
 second function, `renderBooks()`, passing in the JSON-ified data as the
 argument. To check if you have done this correctly, open up the index.html page
@@ -107,6 +107,6 @@ the world is your oyster!
 - [MDN: Using Fetch][fetch]
 
 [got]: https://anapioficeandfire.com/
-[json method]: https://developer.mozilla.org/en-US/docs/Web/API/Response/json
-[response interface]: https://developer.mozilla.org/en-US/docs/Web/API/Response
+[json-method]: https://developer.mozilla.org/en-US/docs/Web/API/Response/json
+[response-interface]: https://developer.mozilla.org/en-US/docs/Web/API/Response
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
